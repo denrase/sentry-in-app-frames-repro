@@ -11,7 +11,7 @@
 enum InAppFramesError: Error {
     case staticError
     case staticWithIncludeError
-    case staticWithExcludeError
+    // case staticWithExcludeError // ignore
     
     case dynamicError
     case dynamicWithIncludeError
@@ -32,11 +32,6 @@ All frames are marked as In-App, regardless if we use inculdes/excludes or stati
 - staticWithIncludeError
   - library frames should be marked as inapp ✅
   - https://sentry-sdks.sentry.io/issues/6607444142/?project=4509327016919040&query=is%3Aunresolved%20issue.priority%3A%5Bhigh%2C%20medium%5D&referrer=issue-stream&stream_index=0
-
-- staticWithExcludeError
-  - library frames should not be marked as inapp ❌ Incorrectly marked as in-app
-  - https://sentry-sdks.sentry.io/issues/6607446696/?project=4509327016919040&query=is%3Aunresolved%20issue.priority%3A%5Bhigh%2C%20medium%5D&referrer=issue-stream&stream_index=0
-
 
 - dynamicLib
   - library frames should not be marked as inapp ❌ Incorrectly marked as in-app
