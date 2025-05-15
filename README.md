@@ -3,6 +3,7 @@
 ## Setup
 
 - The app includes static sentry through SPM. Version 8.50.2
+- Added a new sentry project & wizzard was run to get symbolicated stack traces.
 - There are two SPM libraries, StaticLib & DynamicLib. The latter is defined to be a dynamic library.
 - Both are included locally though SPM.
 - We always start the app with one of the error enum cases:
