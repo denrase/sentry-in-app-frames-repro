@@ -2,7 +2,7 @@
 // https://docs.swift.org/swift-book
 
 public class DynamicLib {
-    public static func bar() {
-        print("bar")
+    public static func bar(callback: () -> Void) {
+        callback()
     }
 }

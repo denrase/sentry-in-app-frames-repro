@@ -25,11 +25,11 @@ struct SentryInAppFramesApp: App {
     
     init() {
         // Go though all errors and trigger them
-        let inAppFramesError = InAppFramesError.staticError
+        let inAppFramesError = InAppFramesError.staticWithExcludeError
         self.inAppFramesError = inAppFramesError
         
         SentrySDK.start { options in
-            options.dsn = "https://6cc9bae94def43cab8444a99e0031c28@o447951.ingest.sentry.io/5428557"
+            options.dsn = "https://993ec28dc35face1e9a950ae87f3084d@o447951.ingest.us.sentry.io/4509327016919040"
             options.debug = true // Helpful to see what's going on
             
             switch inAppFramesError {

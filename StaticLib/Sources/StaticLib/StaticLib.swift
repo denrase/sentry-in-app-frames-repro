@@ -2,7 +2,7 @@
 // https://docs.swift.org/swift-book
 
 public class StaticLib {
-    public static func foo() {
-        print("foo")
+    public static func foo(callback: () -> Void) {
+        callback()
     }
 }

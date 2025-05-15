@@ -23,7 +23,18 @@ struct ContentView: View {
             Text("Hello, Sentry!")
             
             Button("Throw Current InAppFramesError: \(inAppFramesError)") {
-                handleError()
+                
+                
+                switch inAppFramesError {
+                case .staticError, .staticWithIncludeError, .staticWithExcludeError:
+                    StaticLib.foo {
+                        handleError()
+                    }
+                case .dynamicError, .dynamicWithIncludeError, .dynamicWithExcludeError:
+                    DynamicLib.bar {
+                        handleError()
+                    }
+                }
             }
         }
         .padding()
@@ -31,12 +42,7 @@ struct ContentView: View {
     
     func handleError() {
         do {
-            switch inAppFramesError {
-            case .staticError, .staticWithIncludeError, .staticWithExcludeError:
-                StaticLib.foo()
-            case .dynamicError, .dynamicWithIncludeError, .dynamicWithExcludeError:
-                DynamicLib.bar()
-            }
+            
             throw inAppFramesError
         } catch {
             SentrySDK.capture(error: error)
