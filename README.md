@@ -10,8 +10,6 @@
 ```swift 
 enum InAppFramesError: Error {
     case staticError
-    case staticWithIncludeError
-    
     case dynamicError
     case dynamicWithIncludeError
     case dynamicWithExcludeError
@@ -27,10 +25,6 @@ All frames are marked as In-App, regardless if we use inculdes/excludes or stati
 - staticError
   - library frames should be marked as inapp ✅
   - https://sentry-sdks.sentry.io/issues/6607440283/?project=4509327016919040&query=is%3Aunresolved%20issue.priority%3A%5Bhigh%2C%20medium%5D&referrer=issue-stream&stream_index=0
-
-- staticWithIncludeError
-  - library frames should be marked as inapp ✅
-  - https://sentry-sdks.sentry.io/issues/6607444142/?project=4509327016919040&query=is%3Aunresolved%20issue.priority%3A%5Bhigh%2C%20medium%5D&referrer=issue-stream&stream_index=0
 
 - dynamicLib
   - library frames should not be marked as inapp ❌ Incorrectly marked as in-app

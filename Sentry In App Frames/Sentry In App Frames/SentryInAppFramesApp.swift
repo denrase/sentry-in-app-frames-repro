@@ -10,8 +10,6 @@ import Sentry
 
 enum InAppFramesError: Error {
     case staticError
-    case staticWithIncludeError
-    
     case dynamicError
     case dynamicWithIncludeError
     case dynamicWithExcludeError
@@ -34,8 +32,6 @@ struct SentryInAppFramesApp: App {
             switch inAppFramesError {
             case .staticError, .dynamicError:
                 break;
-            case .staticWithIncludeError:
-                options.add(inAppInclude: "StaticLib")
             case .dynamicWithIncludeError:
                 options.add(inAppInclude: "DynamicLib")
             case .dynamicWithExcludeError:

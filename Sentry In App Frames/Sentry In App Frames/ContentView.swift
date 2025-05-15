@@ -26,7 +26,7 @@ struct ContentView: View {
                 
                 
                 switch inAppFramesError {
-                case .staticError, .staticWithIncludeError:
+                case .staticError:
                     StaticLib.foo {
                         handleError()
                     }
