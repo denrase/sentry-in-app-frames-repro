@@ -11,7 +11,6 @@
 enum InAppFramesError: Error {
     case staticError
     case staticWithIncludeError
-    // case staticWithExcludeError // ignore
     
     case dynamicError
     case dynamicWithIncludeError

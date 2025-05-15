@@ -26,7 +26,7 @@ struct ContentView: View {
                 
                 
                 switch inAppFramesError {
-                case .staticError, .staticWithIncludeError, .staticWithExcludeError:
+                case .staticError, .staticWithIncludeError:
                     StaticLib.foo {
                         handleError()
                     }
@@ -42,7 +42,6 @@ struct ContentView: View {
     
     func handleError() {
         do {
-            
             throw inAppFramesError
         } catch {
             SentrySDK.capture(error: error)
