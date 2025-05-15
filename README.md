@@ -3,7 +3,7 @@
 ## Setup
 
 - The app includes static sentry through SPM. Version 8.50.2
-- There are two SPM libraries, StaticLib & DynamicLib. The latter is defines to be a dynamic library.
+- There are two SPM libraries, StaticLib & DynamicLib. The latter is defined to be a dynamic library.
 - Both are included locally though SPM.
 - We always start the app with one of the error enum cases:
 ```swift 
