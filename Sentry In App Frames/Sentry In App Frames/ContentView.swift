@@ -23,21 +23,23 @@ struct ContentView: View {
             Text("Hello, Sentry!")
             
             Button("Throw Current InAppFramesError: \(inAppFramesError)") {
-                
-                
-                switch inAppFramesError {
-                case .staticError:
-                    StaticLib.foo {
-                        handleError()
-                    }
-                case .dynamicError, .dynamicWithIncludeError, .dynamicWithExcludeError:
-                    DynamicLib.bar {
-                        handleError()
-                    }
-                }
+                anotherMethod()
             }
         }
         .padding()
+    }
+    
+    func anotherMethod() {
+        switch inAppFramesError {
+        case .staticError:
+            StaticLib.foo {
+                handleError()
+            }
+        case .dynamicError, .dynamicWithIncludeError, .dynamicWithExcludeError:
+            DynamicLib.bar {
+                handleError()
+            }
+        }
     }
     
     func handleError() {

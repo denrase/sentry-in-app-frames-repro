@@ -22,6 +22,8 @@ enum InAppFramesError: Error {
 
 All frames are marked as In-App, regardless if we use inculdes/excludes or static/dynamic. At least with this setup.
 
+### Debug
+
 - staticError
   - library frames should be marked as inapp ✅
   - https://sentry-sdks.sentry.io/issues/6607440283/?project=4509327016919040&query=is%3Aunresolved%20issue.priority%3A%5Bhigh%2C%20medium%5D&referrer=issue-stream&stream_index=0
@@ -37,3 +39,13 @@ All frames are marked as In-App, regardless if we use inculdes/excludes or stati
 - dynamicWithExcludeError
   - library frames should not be marked as inapp ❌ Incorrectly marked as in-app
   - https://sentry-sdks.sentry.io/issues/6607457469/?project=4509327016919040&query=is%3Aunresolved%20issue.priority%3A%5Bhigh%2C%20medium%5D&referrer=issue-stream&stream_index=0
+
+### Release (Run as Release in Scheme)
+
+- dynamicLib
+  - library frames should not be marked as inapp ❌ Incorrectly marked as in-app
+  - https://sentry-sdks.sentry.io/issues/6607513983/events/latest/?project=4509327016919040&query=is%3Aunresolved%20issue.priority%3A%5Bhigh%2C%20medium%5D&referrer=latest-event&stream_index=0
+
+- dynamicWithExcludeError
+  - library frames should not be marked as inapp ❌ Incorrectly marked as in-app
+  - https://sentry-sdks.sentry.io/issues/6607452572/events/latest/?project=4509327016919040&query=is%3Aunresolved%20issue.priority%3A%5Bhigh%2C%20medium%5D&referrer=latest-event&stream_index=0
