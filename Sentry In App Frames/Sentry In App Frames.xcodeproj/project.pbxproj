@@ -10,7 +10,25 @@
 		9225A7EF2DD603E4008CEE07 /* Sentry in Frameworks */ = {isa = PBXBuildFile; productRef = 9225A7EE2DD603E4008CEE07 /* Sentry */; };
 		9225A81E2DD606B7008CEE07 /* DynamicLib in Frameworks */ = {isa = PBXBuildFile; productRef = 9225A81D2DD606B7008CEE07 /* DynamicLib */; };
 		9225A8212DD606C8008CEE07 /* StaticLib in Frameworks */ = {isa = PBXBuildFile; productRef = 9225A8202DD606C8008CEE07 /* StaticLib */; };
+		92D93B4F2DD72EA4003A09CF /* StaticLib in Frameworks */ = {isa = PBXBuildFile; productRef = 92D93B4E2DD72EA4003A09CF /* StaticLib */; };
+		92D93B522DD72EC0003A09CF /* DynamicLib in Frameworks */ = {isa = PBXBuildFile; productRef = 92D93B512DD72EC0003A09CF /* DynamicLib */; };
+		92D93B552DD72EDA003A09CF /* DynamicLib in Frameworks */ = {isa = PBXBuildFile; productRef = 92D93B542DD72EDA003A09CF /* DynamicLib */; };
+		92D93B562DD72F42003A09CF /* DynamicLib in Embed Frameworks */ = {isa = PBXBuildFile; productRef = 92D93B542DD72EDA003A09CF /* DynamicLib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		92D93B572DD72F42003A09CF /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				92D93B562DD72F42003A09CF /* DynamicLib in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		9225A81A2DD605BD008CEE07 /* StaticLib */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = StaticLib; path = ../StaticLib; sourceTree = SOURCE_ROOT; };
@@ -31,9 +49,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92D93B552DD72EDA003A09CF /* DynamicLib in Frameworks */,
+				92D93B4F2DD72EA4003A09CF /* StaticLib in Frameworks */,
 				9225A81E2DD606B7008CEE07 /* DynamicLib in Frameworks */,
 				9225A7EF2DD603E4008CEE07 /* Sentry in Frameworks */,
 				9225A8212DD606C8008CEE07 /* StaticLib in Frameworks */,
+				92D93B522DD72EC0003A09CF /* DynamicLib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,6 +90,7 @@
 				929FDA452DD602D3007CDE99 /* Frameworks */,
 				929FDA462DD602D3007CDE99 /* Resources */,
 				8B55097967254FC9BD28DD70 /* Upload Debug Symbols to Sentry */,
+				92D93B572DD72F42003A09CF /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -82,6 +104,9 @@
 				9225A7EE2DD603E4008CEE07 /* Sentry */,
 				9225A81D2DD606B7008CEE07 /* DynamicLib */,
 				9225A8202DD606C8008CEE07 /* StaticLib */,
+				92D93B4E2DD72EA4003A09CF /* StaticLib */,
+				92D93B512DD72EC0003A09CF /* DynamicLib */,
+				92D93B542DD72EDA003A09CF /* DynamicLib */,
 			);
 			productName = "Sentry In App Frames";
 			productReference = 929FDA482DD602D3007CDE99 /* Sentry In App Frames.app */;
@@ -113,8 +138,8 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				9225A7ED2DD603E4008CEE07 /* XCRemoteSwiftPackageReference "sentry-cocoa" */,
-				9225A81C2DD606B7008CEE07 /* XCLocalSwiftPackageReference "../DynamicLib" */,
-				9225A81F2DD606C8008CEE07 /* XCLocalSwiftPackageReference "../StaticLib" */,
+				92D93B4D2DD72EA4003A09CF /* XCLocalSwiftPackageReference "../StaticLib" */,
+				92D93B532DD72EDA003A09CF /* XCLocalSwiftPackageReference "../DynamicLib" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 929FDA492DD602D3007CDE99 /* Products */;
@@ -370,13 +395,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCLocalSwiftPackageReference section */
-		9225A81C2DD606B7008CEE07 /* XCLocalSwiftPackageReference "../DynamicLib" */ = {
-			isa = XCLocalSwiftPackageReference;
-			relativePath = ../DynamicLib;
-		};
-		9225A81F2DD606C8008CEE07 /* XCLocalSwiftPackageReference "../StaticLib" */ = {
+		92D93B4D2DD72EA4003A09CF /* XCLocalSwiftPackageReference "../StaticLib" */ = {
 			isa = XCLocalSwiftPackageReference;
 			relativePath = ../StaticLib;
+		};
+		92D93B532DD72EDA003A09CF /* XCLocalSwiftPackageReference "../DynamicLib" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ../DynamicLib;
 		};
 /* End XCLocalSwiftPackageReference section */
 
@@ -404,6 +429,18 @@
 		9225A8202DD606C8008CEE07 /* StaticLib */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = StaticLib;
+		};
+		92D93B4E2DD72EA4003A09CF /* StaticLib */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = StaticLib;
+		};
+		92D93B512DD72EC0003A09CF /* DynamicLib */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = DynamicLib;
+		};
+		92D93B542DD72EDA003A09CF /* DynamicLib */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = DynamicLib;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

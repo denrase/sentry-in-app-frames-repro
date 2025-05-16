@@ -22,7 +22,7 @@ struct SentryInAppFramesApp: App {
     
     init() {
         // Go though all errors and trigger them
-        let inAppFramesError = InAppFramesError.staticError
+        let inAppFramesError = InAppFramesError.dynamicWithExcludeError
         self.inAppFramesError = inAppFramesError
         
         SentrySDK.start { options in
